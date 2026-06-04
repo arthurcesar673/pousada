@@ -6,209 +6,224 @@
 
 <title>Pousada Le Baron | Praia do Francês</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
-margin: 0;
-font-family: Inter, sans-serif;
-color: #1a1a1a;
-background: #fff;
-}
-
-h1,h2,h3 {
-font-family: "Playfair Display", serif;
+margin:0;
+font-family: Inter;
+background:#0b0b0b;
+color:white;
 }
 
 header {
-height: 100vh;
-background: url('images/hero.jpg') center/cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-color: white;
-position: relative;
+height:100vh;
+background:url('images/hero.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
 }
 
-header::after {
-content: "";
-position: absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background: rgba(0,0,0,0.5);
+header::after{
+content:"";
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
 }
 
 .hero {
-position: relative;
-z-index: 2;
-max-width: 800px;
-padding: 20px;
+position:relative;
+z-index:2;
+max-width:800px;
+}
+
+h1 {
+font-family: Playfair Display;
+font-size:50px;
+margin:0;
 }
 
 .btn {
-padding: 12px 18px;
-border-radius: 8px;
-text-decoration: none;
-font-weight: bold;
-display: inline-block;
-margin: 5px;
+padding:12px 20px;
+margin:5px;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+font-weight:bold;
 }
 
-.btn-primary {
-background: #00B8D9;
-color: white;
-}
-
-.btn-dark {
-background: #0066CC;
-color: white;
-}
+.whatsapp {background:#25D366;color:white;}
+.instagram {background:#E1306C;color:white;}
+.reserve {background:#00B8D9;color:white;}
 
 section {
-padding: 60px 20px;
-max-width: 1100px;
-margin: auto;
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.cards {
-display: grid;
-grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-gap: 20px;
+h2 {
+font-family: Playfair Display;
+font-size:32px;
+text-align:center;
+margin-bottom:30px;
+}
+
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.card img {
+width:100%;
+border-radius:10px;
 }
 
 .card {
-background: #f8f8f8;
-padding: 20px;
-border-radius: 10px;
+background:#111;
+padding:10px;
+border-radius:10px;
 }
 
 footer {
-background: #0B3A5D;
-color: white;
-text-align: center;
-padding: 30px;
-margin-top: 40px;
+text-align:center;
+padding:30px;
+background:#000;
 }
 
-.whatsapp {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #25D366;
-color: white;
-padding: 15px 18px;
-border-radius: 50px;
-text-decoration: none;
-font-weight: bold;
-box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+.lang {
+position:fixed;
+top:20px;
+right:20px;
+background:#111;
+padding:10px;
+border-radius:10px;
 }
 </style>
-
 </head>
 
 <body>
 
+<!-- LANG -->
+<div class="lang">
+<select onchange="changeLang(this.value)">
+<option value="pt">PT</option>
+<option value="en">EN</option>
+<option value="es">ES</option>
+</select>
+</div>
+
+<!-- HERO -->
 <header>
 <div class="hero">
-<h1>Pousada Le Baron</h1>
-<p>Seu refúgio na Praia do Francês</p>
+<h1 id="title">Pousada Le Baron</h1>
+<p id="subtitle">Seu refúgio de luxo na Praia do Francês</p>
 
-<p>
-✔ 250 metros da praia<br>
-✔ Café da manhã incluso<br>
-✔ Piscina<br>
-✔ Wi-Fi gratuito
-</p>
-
-<a class="btn btn-primary" href="https://wa.me/558232601165?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva." target="_blank">
-Reservar Agora
-</a>
-
-<a class="btn btn-dark" href="https://www.instagram.com/pousada_lebaron/" target="_blank">
-Instagram
-</a>
-
+<a class="btn reserve" href="#reserve">Reserve aqui</a>
+<a class="btn whatsapp" href="https://wa.me/558232601165">WhatsApp</a>
+<a class="btn instagram" href="https://www.instagram.com/pousada_lebaron/">Instagram</a>
 </div>
 </header>
 
+<!-- SOBRE -->
 <section>
-<h2>Sobre a Pousada</h2>
-<p>
-A Pousada Le Baron está localizada a aproximadamente 250 metros da Praia do Francês, oferecendo conforto, tranquilidade e uma experiência acolhedora no litoral de Alagoas.
+<h2 id="aboutTitle">Sobre a Pousada</h2>
+<p id="aboutText">
+Localizada a aproximadamente 250 metros da Praia do Francês, a Pousada Le Baron oferece conforto, luxo e tranquilidade em um ambiente exclusivo.
 </p>
 </section>
 
+<!-- GALERIA QUARTOS STANDARD -->
 <section>
-<h2>Acomodações</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Quarto Standard</h3>
-<p>Conforto essencial com ar-condicionado, TV e Wi-Fi.</p>
-</div>
-
-<div class="card">
-<h3>Quarto Superior</h3>
-<p>Mais espaço e comodidade para sua estadia.</p>
-</div>
-
-<div class="card">
-<h3>Quarto Família</h3>
-<p>Ideal para famílias e grupos.</p>
-</div>
-
+<h2>Quartos Standard</h2>
+<div class="grid">
+<div class="card"><img src="images/quarto-standart.jpg-1.jpg"></div>
+<div class="card"><img src="images/quarto-standart.jpg-2.jpg"></div>
+<div class="card"><img src="images/quarto-standart.jpg-3.jpg"></div>
 </div>
 </section>
 
+<!-- GALERIA QUARTOS SUPERIOR -->
 <section>
-<h2>Diferenciais</h2>
-
-<div class="cards">
-<div class="card">✔ Piscina</div>
-<div class="card">✔ Café da manhã</div>
-<div class="card">✔ Wi-Fi gratuito</div>
-<div class="card">✔ Ar-condicionado</div>
-<div class="card">✔ Estacionamento</div>
-<div class="card">✔ Recepção 24h</div>
+<h2>Quartos Superior</h2>
+<div class="grid">
+<div class="card"><img src="images/quarto-superior.jpg-1.jpg"></div>
+<div class="card"><img src="images/quarto-superior.jpg-2.jpg"></div>
+<div class="card"><img src="images/quarto-superior.jpg-3.jpg"></div>
+<div class="card"><img src="images/quarto-superior.jpg-4.jpg"></div>
 </div>
 </section>
 
+<!-- PISCINA -->
 <section>
-<h2>Galeria</h2>
-<div class="cards">
-<div class="card">Foto fachada</div>
-<div class="card">Piscina</div>
-<div class="card">Quartos</div>
-<div class="card">Café da manhã</div>
+<h2>Piscina</h2>
+<div class="grid">
+<div class="card"><img src="images/piscina.jpg-1.jpg"></div>
+<div class="card"><img src="images/piscina.jpg-2.jpg"></div>
+<div class="card"><img src="images/piscina.jpg-3.jpg"></div>
 </div>
 </section>
 
+<!-- AREAS COMUNS -->
+<section>
+<h2>Áreas Comuns</h2>
+<div class="grid">
+<div class="card"><img src="images/area-comum-1.jpg"></div>
+<div class="card"><img src="images/area-comum-2.jpg"></div>
+<div class="card"><img src="images/area-comum-3.jpg"></div>
+<div class="card"><img src="images/area-comum-4.jpg"></div>
+<div class="card"><img src="images/area-comum-5.jpg"></div>
+<div class="card"><img src="images/area-comum-6.jpg"></div>
+<div class="card"><img src="images/area-comum-7.jpg"></div>
+<div class="card"><img src="images/area-comum-8.jpg"></div>
+<div class="card"><img src="images/area-comum-9.jpg"></div>
+</div>
+</section>
+
+<!-- RESERVA -->
+<section id="reserve">
+<h2>Reserve sua estadia</h2>
+<p>Entre em contato direto e garanta sua reserva.</p>
+
+<a class="btn whatsapp" href="https://wa.me/558232601165?text=Olá!%20Quero%20fazer%20uma%20reserva%20na%20Pousada%20Le%20Baron">Reservar no WhatsApp</a>
+</section>
+
+<!-- LOCALIZAÇÃO -->
 <section>
 <h2>Localização</h2>
-<p>Avenida Caravelas, 578 - Praia do Francês - AL</p>
-
 <iframe
 src="https://www.google.com/maps?q=Avenida+Caravelas+578+Praia+do+Francês&output=embed"
-width="100%" height="300" style="border:0;">
+width="100%" height="300" style="border:0;border-radius:10px;">
 </iframe>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>Pousada Le Baron - Praia do Francês - Alagoas</p>
-<p>
-<a href="https://www.instagram.com/pousada_lebaron/" style="color:white;">Instagram</a>
-</p>
+<p>Pousada Le Baron - Praia do Francês</p>
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/558232601165?text=Olá!%20Gostaria%20de%20consultar%20disponibilidade."
-target="_blank">
-WhatsApp
-</a>
+<!-- LANGUAGE SCRIPT -->
+<script>
+function changeLang(lang){
+if(lang==="en"){
+document.getElementById("title").innerText="Le Baron Inn";
+document.getElementById("subtitle").innerText="Your luxury refuge in Praia do Francês";
+document.getElementById("aboutText").innerText="Located about 250 meters from Praia do Francês, offering comfort and luxury.";
+}
+if(lang==="es"){
+document.getElementById("title").innerText="Posada Le Baron";
+document.getElementById("subtitle").innerText="Tu refugio de lujo en Praia do Francés";
+document.getElementById("aboutText").innerText="Ubicada a 250 metros de la playa del Francés.";
+}
+if(lang==="pt"){
+location.reload();
+}
+}
+</script>
 
 </body>
 </html>
