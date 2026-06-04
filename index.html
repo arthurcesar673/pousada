@@ -18,7 +18,7 @@ color:#fff;
 
 header{
 height:100vh;
-background:url('images/piscina.jpg-1') center/cover no-repeat;
+background:url('images/piscina.jpg-1.jpeg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -117,7 +117,6 @@ color:#888;
 
 <body>
 
-<!-- LANG -->
 <div class="lang">
 <select onchange="changeLang(this.value)">
 <option value="pt">PT</option>
@@ -126,83 +125,65 @@ color:#888;
 </select>
 </div>
 
-<!-- HERO -->
 <header>
 <div class="hero">
-<h1 id="title">Pousada Le Baron</h1>
-
-<p id="subtitle">Seu refúgio na Praia do Francês</p>
+<h1>Pousada Le Baron</h1>
+<p>Seu refúgio na Praia do Francês</p>
 
 <a class="btn reserve" href="#reserve">Reservar</a>
-<a class="btn whatsapp" href="https://wa.me/558232601165?text=Olá!%20Quero%20fazer%20uma%20reserva%20na%20Pousada%20Le%20Baron">WhatsApp</a>
+<a class="btn whatsapp" href="https://wa.me/558232601165?text=Olá!%20Quero%20reservar%20na%20Pousada%20Le%20Baron">WhatsApp</a>
 <a class="btn instagram" href="https://www.instagram.com/pousada_lebaron/">Instagram</a>
 </div>
 </header>
 
-<!-- SOBRE -->
-<section>
-<h2 id="aboutTitle">Bem-vindo</h2>
-<p id="aboutText">
-Localizada na Avenida Caravelas, 578 – Praia do Francês – AL, a Pousada Le Baron oferece conforto, tranquilidade e uma experiência única de hospedagem.
-</p>
-</section>
-
-<!-- QUARTO STANDARD -->
 <section>
 <h2>Quartos Standard</h2>
 <div class="grid">
-<img src="images/quarto-standart.jpg-1">
-<img src="images/quarto-standart.jpg-2">
-<img src="images/quarto-standart.jpg-3">
+<img src="images/quarto-standart.jpg-1.jpeg">
+<img src="images/quarto-standart.jpg-2.jpeg">
+<img src="images/quarto-standart.jpg-3.jpeg">
 </div>
 </section>
 
-<!-- QUARTO SUPERIOR -->
 <section>
 <h2>Quartos Superior</h2>
 <div class="grid">
-<img src="images/quarto-superior.jpg-1">
-<img src="images/quarto-superior.jpg-2">
-<img src="images/quarto-superior.jpg-3">
-<img src="images/quarto-superior.jpg-4">
+<img src="images/quarto-superior.jpg-1.jpeg">
+<img src="images/quarto-superior.jpg-2.jpeg">
+<img src="images/quarto-superior.jpg-3.jpeg">
+<img src="images/quarto-superior.jpg-4.jpeg">
 </div>
 </section>
 
-<!-- PISCINA -->
 <section>
 <h2>Piscina</h2>
 <div class="grid">
-<img src="images/piscina.jpg-1">
-<img src="images/piscina.jpg-2">
-<img src="images/piscina.jpg-3">
+<img src="images/piscina.jpg-1.jpeg">
+<img src="images/piscina.jpg-2.jpeg">
+<img src="images/piscina.jpg-3.jpeg">
 </div>
 </section>
 
-<!-- AREAS COMUNS -->
 <section>
 <h2>Áreas Comuns</h2>
 <div class="grid">
-<img src="images/area-comum-1.jpg">
-<img src="images/area-comum-2.jpg">
-<img src="images/area-comum-3.jpg">
-<img src="images/area-comum-4.jpg">
-<img src="images/area-comum-5.jpg">
-<img src="images/area-comum-6.jpg">
-<img src="images/area-comum-7.jpg">
-<img src="images/area-comum-8.jpg">
-<img src="images/area-comum-9.jpg">
+<img src="images/area-comum-1.jpeg">
+<img src="images/area-comum-2.jpeg">
+<img src="images/area-comum-3.jpeg">
+<img src="images/area-comum-4.jpeg">
+<img src="images/area-comum-5.jpeg">
+<img src="images/area-comum-6.jpeg">
+<img src="images/area-comum-7.jpeg">
+<img src="images/area-comum-8.jpeg">
+<img src="images/area-comum-9.jpeg">
 </div>
 </section>
 
-<!-- RESERVA -->
 <section id="reserve">
 <h2>Reserva</h2>
-<p>Fale conosco e garanta sua estadia.</p>
-
-<a class="btn whatsapp" href="https://wa.me/558232601165?text=Olá!%20Quero%20reservar%20um%20quarto%20na%20Pousada%20Le%20Baron">Reservar pelo WhatsApp</a>
+<a class="btn whatsapp" href="https://wa.me/558232601165?text=Olá!%20Quero%20reservar%20um%20quarto">Reservar no WhatsApp</a>
 </section>
 
-<!-- LOCALIZAÇÃO -->
 <section>
 <h2>Localização</h2>
 <iframe
@@ -212,25 +193,17 @@ width="100%" height="300" style="border:0;border-radius:10px;">
 </section>
 
 <footer>
-Pousada Le Baron • Praia do Francês • Alagoas
+Pousada Le Baron • Praia do Francês
 </footer>
 
-<!-- TRADUÇÃO -->
 <script>
 function changeLang(lang){
-
 if(lang==="en"){
-document.getElementById("title").innerText="Le Baron Inn";
-document.getElementById("subtitle").innerText="Your refuge in Praia do Francês";
-document.getElementById("aboutText").innerText="Located in Avenida Caravelas, 578 – Alagoas, offering comfort and a unique stay experience.";
+document.querySelector("p").innerText="Your refuge in Praia do Francês";
 }
-
 if(lang==="es"){
-document.getElementById("title").innerText="Posada Le Baron";
-document.getElementById("subtitle").innerText="Tu refugio en Praia do Francês";
-document.getElementById("aboutText").innerText="Ubicada en Avenida Caravelas, 578 – Alagoas, ofreciendo confort y tranquilidad.";
+document.querySelector("p").innerText="Tu refugio en Praia do Francés";
 }
-
 if(lang==="pt"){
 location.reload();
 }
